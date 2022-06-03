@@ -1,0 +1,22 @@
+.drawer-country {
+    display: flex;
+    padding-block: 10px;
+    margin-block: 5px;
+    padding-inline: 20px;
+    align-items: center;
+}
+
+.drawer-country:hover {
+    cursor: pointer;
+    background-color: #A7A3B3;
+}
+
+.drawer-country-img {
+    height: 15px;
+    width: 24px;
+}
+
+.drawer-country-name {
+    width: 100%;
+    padding-inline: 7px;
+}

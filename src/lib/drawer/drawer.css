@@ -1,0 +1,41 @@
+.drawer {
+    height: 100vh;
+    width: 30vw;
+    background-color: #293359;
+    
+    padding-top: 30px;
+    overflow-y: scroll;
+}
+
+.drawer-title {
+    padding-inline: 20px;
+}
+
+.drawer-comps {
+    padding-top: 10px;
+}
+
+.drawer-countries {
+    padding-inline: 20px;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #293359;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #788AB2;
+  }

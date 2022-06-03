@@ -1,24 +1,28 @@
-.App {
-  text-align: center;
-}
+:root {
+  --clr-violet: hsl(257, 40%, 49%);
+  --clr-soft-magenta: hsl(300, 69%, 71%);
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+  --fw-bold: 600;
+  --fw-normal: 400;
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+  --ff-poppins: "Poppins";
+  --ff-body: "Open Sans";
+
+  font-family: var(--ff-body), sans-serif;
+  font-weight: var(--fw-normal);
   color: white;
 }
 
-.App-intro {
-  font-size: large;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+body *,
+body *::after,
+body *::before {
+  display: block;
 }
