@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+
+:root{
+    --clr-thicker-blue: #0E0C2f;
+    --clr-oxe-blood:  #5A142B;
+    --clr-pink: #B81B2E;
+    --clr-thick-blue: #293359;
+    --clr-grey: #A7A3B3;
+    --clr-shiny-blue: #435FA6;
+    --clr-blue: #788AB2;
+    --clr-white: #fff;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+body *, body *::before,body *::after{
+    display: block;
+}
+
+*, *::before,*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--clr-grey);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0.5rem;
+}
+
+header{
+    background-color: var(--clr-white);
+    padding: 1.1rem;
+    /* margin: 0.5rem; */
+    border-radius: 0.5rem;
+}
+
+.top-nav{
+    display: flex;
+    gap: 56rem;
+}
+
+.btns{
+    display: flex;
+    gap: 1rem;
+}
+
+.btn{
+    text-decoration: none;
+  
+    padding: 0.7rem;
+    width: 8rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.btn-1{
+    background-color: var(--clr-thick-blue);
+    color: var(--clr-white);
+}
+
+.btn-2{
+    border: 2px solid var(--clr-shiny-blue);
+    color: var(--clr-shiny-blue);
+}
+
+.country{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.country-img{
+    height:1rem;
+}
+
+
+
+
+/* middle section */
+.col{
+    background-color: var(--clr-white);
+    border-radius: 0.5rem;
+}
+
+.middle-section{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.small-col{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.5rem;
+}
+
+.large-col{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    gap: 0.5rem;
+}
+
+.large-col-stats{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.left{
+    border-right: 2px solid var(--clr-grey);
+    padding-right: 0.5rem;
+}
+
+/* .right{
+    padding-left: 0.5rem;
+} */
+.s-col-top{
+    display: flex;
+
+}
+
+.s-col-img{
+    height: 1.3rem;
+    align-self: center;
+}
+
+.value{
+    color: var(--clr-thick-blue);
+    font-weight: bold;
+}
+
+.s-col-top-val-red{
+    color: red;
+}
+
+.s-col-top-val-green{
+    color: green;
+}
+
+/* map section */
+
+.map-section{
+    height: 70vh;
+    background-color: var(--clr-white);
+    border-radius: 0.5rem;
+}
+
+
+
+.thick-blue-text{
+    color: var(--clr-thicker-blue);
+}
