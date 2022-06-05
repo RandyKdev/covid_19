@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
 
 :root{
@@ -10,8 +10,11 @@
     --clr-shiny-blue: #435FA6;
     --clr-blue: #788AB2;
     --clr-white: #fff;
-
+    --clr-unknown: #47d2e7;
+    --clr-new-grey: #e4e3e3;
+    --fw-bold: 700;
     font-family: 'Poppins', sans-serif;
+    font-size: 13px;
 }
 
 body *, body *::before,body *::after{
@@ -25,14 +28,14 @@ body *, body *::before,body *::after{
 }
 
 body{
-    background-color: var(--clr-grey);
+    background-color: var(--clr-new-grey);
 }
 
 main{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    margin: 0.5rem;
+    margin: 1.3rem;
 }
 
 header{
@@ -44,7 +47,8 @@ header{
 
 .top-nav{
     display: flex;
-    gap: 56rem;
+    gap: 43rem;
+    padding-left: 1rem;
 }
 
 .btns{
@@ -54,21 +58,26 @@ header{
 
 .btn{
     text-decoration: none;
-  
+    background-color: var(--clr-shiny-blue);
+    color: var(--clr-white);
     padding: 0.7rem;
     width: 8rem;
     border-radius: 0.5rem;
     text-align: center;
-}
-
-.btn-1{
-    background-color: var(--clr-thick-blue);
-    color: var(--clr-white);
-}
-
-.btn-2{
     border: 2px solid var(--clr-shiny-blue);
-    color: var(--clr-shiny-blue);
+}
+/* 
+.btn-1{
+    background-color: var(--clr-shiny-blue);
+    color: var(--clr-white);
+} */
+
+.btn:hover{
+    /* border: 2px solid var(--clr-shiny-blue);
+    color: var(--clr-shiny-blue); */
+    border: 2px solid var(--clr-unknown);
+    color: var(--clr-unknown);
+    background-color: var(--clr-white);
 }
 
 .country{
@@ -133,16 +142,17 @@ header{
 }
 
 .value{
-    color: var(--clr-thick-blue);
-    font-weight: bold;
+    color: var(--clr-shiny-blue);
+    font-weight: var(--fw-bold);
+    font-size: 1.5rem;
 }
 
 .s-col-top-val-red{
-    color: red;
+    color: var(--clr-pink);
 }
 
 .s-col-top-val-green{
-    color: green;
+    color: var(--clr-unknown);
 }
 
 /* map section */
@@ -154,7 +164,7 @@ header{
 }
 
 
-
+/* all normal text color */
 .thick-blue-text{
-    color: var(--clr-thicker-blue);
+    color: var(--clr-thick-blue);
 }
