@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './country.css';
-import cmr from '../../../images/cmr.png';
 
 class Country extends Component {
   render() {

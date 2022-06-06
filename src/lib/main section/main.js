@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-
+import React from 'react';
+import CountryInformation from '../components/countryInformation/countryInformation';
 import './index.css';
 
 function Main({selected}){
@@ -74,7 +74,7 @@ function Main({selected}){
     </div>
 
     <div className="map-section">
-   
+        <CountryInformation />
     </div>
 </main>
     );
