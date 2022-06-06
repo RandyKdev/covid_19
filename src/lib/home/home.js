@@ -1,14 +1,17 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import Drawer from '../drawer/drawer';
+import Main  from '../main section/main';
 
-class Home extends Component {
-  render() {
+function Home(){
+  const [selected, setSelected] = useState({});
+ 
     return (
       <div className="Home">
-          <Drawer />
+          <Drawer setSelected={setSelected}/>
+          <Main selected={selected}/>
       </div>
     );
-  }
+ 
 }
 
 export default Home;
