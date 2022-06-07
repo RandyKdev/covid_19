@@ -1,3 +1,49 @@
 .container {
-    background-color: black;
+    display: inline-block;
+}
+.center-container {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top-row{
+    display: flex;
+    gap: 50px;
+}  
+.bottom-row{
+    display: flex;
+    gap: 50px;
+}
+
+.card{
+    height: 100px;
+    width: 250px;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card:hover{
+    height: 110px;
+    width: 260px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    font-size: 18px;
+}
+
+.recovery{
+    color: #435FA6
+}
+h3{
+    padding-top: 10px;
+    padding-left: 10px;
+    color: #B81B2E;
+}
+
+h4{
+    padding-top: 30px;
+    padding-left: 10px;
+    font-size: 12px;
+    color: #B81B2E;
 }

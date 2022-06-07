@@ -80,6 +80,7 @@ function Main({selected, countries, stats}){
         <Map countries={countries} />
     </div> : <CountryInformation country={selected} />}
     
+
 </main>
     );
 
