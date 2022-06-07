@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-scripts": "0.9.5"
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-scripts": "0.9.5",
+    "react-simple-maps": "^2.3.0",
+    "react-tooltip": "^4.2.21"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
