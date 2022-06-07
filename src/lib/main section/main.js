@@ -74,7 +74,7 @@ function Main({selected}){
     </div>
 
     <div className="map-section">
-        <CountryInformation />
+        <CountryInformation selected={selected}/>
     </div>
 </main>
     );
