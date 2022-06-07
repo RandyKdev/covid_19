@@ -1,10 +1,10 @@
 import React from "react";
 import './countryInformation.css'
 
-function CountryInformation(){
+function CountryInformation({country}){
     return(
             <div className='container'>
-               
+               {country.cases}
             </div>
     );
 }

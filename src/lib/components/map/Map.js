@@ -1,12 +1,10 @@
 import React, {useState} from "react";
-import "./App.css";
+// import "./Map.css";
 import { 
         ComposableMap,
         Geographies,
         Geography,
         Marker,
-        Annotation,
-        ZoomableGroup
  } from "react-simple-maps";
  import ReactTooltip from "react-tooltip";
 
@@ -35,12 +33,12 @@ import {
 
  const geoUrl = "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
- function Map(){
+ function Map({countries}){
    const [content, setcontent] = useState("");
 
    return (
      <div 
-     className="Map" 
+    //  className="Map" 
      style={{
        width: "100%",
        height: "100%",
@@ -48,19 +46,13 @@ import {
        flexDirection: "column",
        justifyContent: "center",
        alignItems: "center",
-       background: "cornsilk",
+       background: "white",
             }}
        >
-
-       <h1>
-         Covid-19 Map signatures
-       </h1>
       
        <ReactTooltip>{content}</ReactTooltip>
-        <div style={{width: "1400px", borderStyle: "double"}}>
-        <ComposableMap data-tip="">
-          <ZoomableGroup zoom={1}>
-            {" "}
+        <div style={{width: "100%"}}>
+        <ComposableMap data-tip={""}>
           <Geographies geography={geoUrl}>
           {({geographies}) => 
         geographies.map((geo) => (
@@ -68,11 +60,13 @@ import {
              key={geo.rsmKey} 
              geography={geo} 
              onMouseEnter={() => {
-             const { NAME } = geo.properties;
-             setcontent(`${NAME}`);
+             let n = geo.properties.NAME;
+             console.log(n);
+             n = n + '\n' + countries[countries.findIndex(x => x.name.toLowerCase() === n.toLowerCase())].cases
+             setcontent(n);
              }} 
              onMouseLeave={() => {
-               setcontent(" ");
+               setcontent("");
              }}
              style={{
                hover: {
@@ -87,7 +81,7 @@ import {
         {
           markers.map(({name,coordinates, markerOffset}) => (
             <Marker key={name} coordinates={coordinates}>
-              <circle r={10} fill = "#F00" stroke="#fff" strokeWidth={2}/>
+              <circle r={10} fill="#F00" stroke="#fff" strokeWidth={2}/>
               <text textAnchor=" middle" y={markerOffset} style={{fontFamily: "system-ui", fill: "#5D5A6D"}}>
                 {name}
 
@@ -95,7 +89,7 @@ import {
             </Marker>
           ))
         }
-        <Annotation subject={[2.3522, 48.8566]} 
+        {/* <Annotation subject={[2.3522, 48.8566]} 
         dx={-90}
         dy={-30}
         
@@ -114,8 +108,7 @@ import {
             >
               {"Paris"}
             </text>
-        </Annotation>
-        </ZoomableGroup>
+        </Annotation> */}
         </ComposableMap>
        </div>
      </div>

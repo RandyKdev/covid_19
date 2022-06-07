@@ -23,13 +23,13 @@ body{
 }
 
 main{
-    overflow-y: hidden;
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    margin-left: 30vw;
-    margin-top: -100vh;
-    width:  70vw;
+    /* margin-left: 30vw; */
+    /* margin-top: -100vh; */
+    width:  75vw;
     height: 100vh;
 }
 
@@ -43,6 +43,7 @@ header{
 
 .top-nav{
     display: flex;
+    justify-content: space-between;
     gap: 43rem;
     padding-left: 1rem;
 }
@@ -97,8 +98,8 @@ header{
 }
 
 .middle-section{
-    margin-left: 20px;
     display: flex;
+    justify-content: center;
     gap: 0.5rem;
 }
 
@@ -157,8 +158,10 @@ header{
 
 .map-section{
     margin-top: 10px;
-    height: 75%;
+    height: 100%;
+    font-size: 40;
     background-color: var(--clr-white);
+    width: 100%;
 }
 
 
