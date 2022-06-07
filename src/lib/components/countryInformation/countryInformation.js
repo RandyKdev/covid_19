@@ -1,7 +1,6 @@
 import React from "react";
 import './countryInformation.css'
 import numeral from "numeral";
-
 function CountryInformation({selected}){
     return(
             <div className='center-container'>

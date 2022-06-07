@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './drawer.css';
 import Country from '../components/country/country.js';
 
 
-function Drawer({setSelected}){
-const [countries, setCountries] = useState([]);
+function Drawer({setSelected, countries}){
+
 
 useEffect(() =>{
   getCountries()
@@ -26,7 +26,7 @@ const getCountries = async () => {
         active:Country.active,
         critical:Country.critical
       }
-    ))
+    )
     setCountries(countries);
     console.log(countries);
   })
