@@ -1,0 +1,28 @@
+:root {
+  --clr-violet: hsl(257, 40%, 49%);
+  --clr-soft-magenta: hsl(300, 69%, 71%);
+
+  --fw-bold: 600;
+  --fw-normal: 400;
+
+  --ff-poppins: "Poppins";
+  --ff-body: "Open Sans";
+
+  font-family: var(--ff-body), sans-serif;
+  font-weight: var(--fw-normal);
+  color: white;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body *,
+body *::after,
+body *::before {
+  display: block;
+}
