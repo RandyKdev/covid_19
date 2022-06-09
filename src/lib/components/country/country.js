@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './country.css';
+import numeral from "numeral";
 
 class Country extends Component {
   render() {
@@ -17,7 +18,7 @@ class Country extends Component {
           critical:this.props.critical})}>
             <img src={this.props.src}  alt="icon" className="drawer-country-img"/>
         <p className="drawer-country-name">{this.props.name}</p>
-        <p className="drawer-country-case">{this.props.cases}</p>
+        <p className="drawer-country-case">{numeral(this.props.cases).format("0,0")}</p>
     </div>
     );
   }
