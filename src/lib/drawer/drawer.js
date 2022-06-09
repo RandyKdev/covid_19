@@ -12,6 +12,19 @@ function Drawer({setSelected, countries}){
         <h2 className="drawer-countries">Countries</h2>
         {
           countries.map((country) =>{
+           if(countries.indexOf(country) === 0){
+            <Country key={countries.indexOf(country)} src={country.flag} 
+            name={country.name}
+            setSelect={setSelected}  
+            todayCase={country.todayCases}
+            recovered ={country.recovered}
+            todayRecovered={country.todayRecovered}
+            active={country.active}
+            critical={country.critical}
+            cases={country.cases}
+            deaths={country.deaths}
+           />
+           }else{
             return (
               <Country key={countries.indexOf(country)} src={country.flag} 
                name={country.name}
@@ -25,6 +38,7 @@ function Drawer({setSelected, countries}){
                deaths={country.deaths}
               />
             )
+           }
           })
         }
        </div>

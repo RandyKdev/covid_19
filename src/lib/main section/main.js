@@ -86,7 +86,7 @@ function Main({selected, countries, stats}){
     
     {selected.flag == null ? <div className="map-section">
         <Map countries={countries} />
-    </div> : <CountryInformation selected={selected} />}
+    </div> : <div className="map-section"><CountryInformation selected={selected} /></div>}
     
 
 </main>

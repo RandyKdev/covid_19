@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 // import "./Map.css";
+import numeral from "numeral";
 import { 
         ComposableMap,
         Geographies,
@@ -62,7 +63,11 @@ import {
              onMouseEnter={() => {
              let n = geo.properties.NAME;
              console.log(n);
-             n = n + '\n' + countries[countries.findIndex(x => x.name.toLowerCase() === n.toLowerCase())].cases
+             if(n === "United States of America"){
+               n = n + '\n' + numeral(countries[countries.findIndex(x => x.name.toLowerCase() === "usa")].cases).format("0,0")
+             }else{
+              n = n + '\n' + numeral(countries[countries.findIndex(x => x.name.toLowerCase() === n.toLowerCase())].cases).format("0,0")
+             }
              setcontent(n);
              }} 
              onMouseLeave={() => {

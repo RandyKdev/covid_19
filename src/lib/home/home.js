@@ -25,6 +25,17 @@ const getCountries = async () => {
         critical:Country.critical
       }
     ))
+    // countries.unshift(  {
+    //   name: null,
+    //   flag:null,
+    //   cases: null,
+    //   deaths: null,
+    //   todayCases: null,
+    //   recovered:null,
+    //   todayRecovered:null,
+    //   active:null,
+    //   critical:null,
+    // })
     setCountries(countries);
     console.log(countries);
   })
