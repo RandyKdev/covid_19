@@ -17,8 +17,25 @@ const getCountries = async () => {
         name: Country.country,
         flag:Country.countryInfo.flag,
         cases: Country.cases,
+        deaths: Country.deaths,
+        todayCases: Country.todayCases,
+        recovered:Country.recovered,
+        todayRecovered:Country.todayRecovered,
+        active:Country.active,
+        critical:Country.critical
       }
     ))
+    // countries.unshift(  {
+    //   name: null,
+    //   flag:null,
+    //   cases: null,
+    //   deaths: null,
+    //   todayCases: null,
+    //   recovered:null,
+    //   todayRecovered:null,
+    //   active:null,
+    //   critical:null,
+    // })
     setCountries(countries);
     console.log(countries);
   })
