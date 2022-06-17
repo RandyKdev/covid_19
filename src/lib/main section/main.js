@@ -6,7 +6,7 @@ import './index.css';
 import numeral from "numeral";
 import Map from '../components/map/Map';
 
-function Main({selected, countries, stats}){
+function Main({selected, countries, stats, route}){
     const current = new Date();
     const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
     return (
@@ -23,10 +23,10 @@ function Main({selected, countries, stats}){
                 </div>
                  }
         
-           {/* <div className="btns">
-               <a href="" className="btn btn-1">Sign in</a>
-                <a href="" className="btn btn-2">Sign up</a>
-            </div> */}
+           <div className="btns">
+               <a href="" onClick={() => route(true)} className="btn btn-1">Sign in</a>
+                {/* <a href="" className="btn btn-2">Sign up</a> */}
+            </div>
             
         </div>
     </header>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Drawer from '../drawer/drawer';
+import Login from '../login/login';
 import Main  from '../main section/main';
 import './home.css';
 
@@ -7,6 +8,7 @@ function Home(){
   const [selected, setSelected] = useState({});
   const [countries, setCountries] = useState([]);
   const [stats, setStats] = useState({});
+  const [displayLogin, setDisplayLogin] = useState(null);
 
 const getCountries = async () => {
   await fetch('https://disease.sh/v3/covid-19/countries')
@@ -55,11 +57,16 @@ useEffect(() =>{
   getStats();
 }, [])
  
- 
+ if(displayLogin) {
+  // return <div>hey</div>
+  return (
+    <Login route={setDisplayLogin} />
+  );
+ }
     return (
       <div className="home">
           <Drawer countries={countries} setSelected={setSelected}/>
-          <Main stats={stats} countries={countries} selected={selected}/>
+          <Main stats={stats} route={setDisplayLogin} countries={countries} selected={selected}/>
       </div>
     );
  
