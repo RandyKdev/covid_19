@@ -8,7 +8,7 @@ function Home(){
   const [selected, setSelected] = useState({});
   const [countries, setCountries] = useState([]);
   const [stats, setStats] = useState({});
-  const [displayLogin, setDisplayLogin] = useState(null);
+  const [displayLogin, setDisplayLogin] = useState(false);
 
 const getCountries = async () => {
   await fetch('https://disease.sh/v3/covid-19/countries')

@@ -3,11 +3,11 @@ import './login.css';
 
 function Login({isLogin, route}){
   const [login, setLogin] = useState(isLogin);
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [password, setPassword] = useState("");
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [password, setPassword] = useState('');
 
   const onSignup = () => {
 
@@ -46,31 +46,31 @@ function Login({isLogin, route}){
             <div className="col-xs-12 col-sm-6">
               <div className="form-group">
                 <label>First Name<span className="req">*</span> </label>
-                <input type="text" value={firstName} onChange={setFirstName} className="form-control" id="first_name" required data-validation-required-message="Please enter your name." autocomplete="off" />
+                <input type="text" value={firstName} onChange={(text) => setFirstName(text.target.value)} className="form-control" id="first_name" required data-validation-required-message="Please enter your name." autocomplete="off" />
                 <p className="help-block text-danger"></p>
               </div>
             </div>
             <div className="col-xs-12 col-sm-6">
               <div className="form-group">
                 <label> Last Name<span className="req">*</span> </label>
-                <input type="text" value={lastName} onChange={setLastName} className="form-control" id="last_name" required data-validation-required-message="Please enter your name." autocomplete="off" />
+                <input type="text" value={lastName} onChange={(text) => setLastName(text.target.value)} className="form-control" id="last_name" required data-validation-required-message="Please enter your name." autocomplete="off" />
                 <p className="help-block text-danger"></p>
               </div>
             </div>
           </div>
           <div className="form-group">
             <label> Your Email<span className="req">*</span> </label>
-            <input type="email" value={email} onChange={setEmail} className="form-control" id="email" required data-validation-required-message="Please enter your email address." autocomplete="off" />
+            <input type="email" value={email} onChange={(text) => setEmail(text.target.value)} className="form-control" id="email" required data-validation-required-message="Please enter your email address." autocomplete="off" />
             <p className="help-block text-danger"></p>
           </div>
           <div className="form-group">
             <label> Your Phone<span className="req">*</span> </label>
-            <input type="tel" value={phone} onChange={setPhone} className="form-control" id="phone" required data-validation-required-message="Please enter your phone number." autocomplete="off" />
+            <input type="tel" value={phone} onChange={(text) => setPhone(text.target.value)} className="form-control" id="phone" required data-validation-required-message="Please enter your phone number." autocomplete="off" />
             <p className="help-block text-danger"></p>
           </div>
           <div className="form-group">
             <label> Password<span className="req">*</span> </label>
-            <input type="password" value={password} onChange={setPassword} className="form-control" id="password" required data-validation-required-message="Please enter your password" autocomplete="off" />
+            <input type="password" value={password} onChange={(text) => setPassword(text.target.value)} className="form-control" id="password" required data-validation-required-message="Please enter your password" autocomplete="off" />
             <p className="help-block text-danger"></p>
           </div>
           <div className="mrgn-30-top">
@@ -91,13 +91,13 @@ function Login({isLogin, route}){
          
           <div className="form-group">
             <label> Your Email<span className="req">*</span> </label>
-            <input type="email" value={email} onChange={setEmail} className="form-control" id="email" required data-validation-required-message="Please enter your email address." autocomplete="off" />
+            <input type="email" value={email} onChange={(text) => setEmail(text.target.value)} className="form-control" id="email" required data-validation-required-message="Please enter your email address." autocomplete="off" />
             <p className="help-block text-danger"></p>
           </div>
           
           <div className="form-group">
             <label> Password<span className="req">*</span> </label>
-            <input type="password" value={password} onChange={setPassword} className="form-control" id="password" required data-validation-required-message="Please enter your password" autocomplete="off" />
+            <input type="password" value={password} onChange={(text) => setPassword(text.target.value)} className="form-control" id="password" required data-validation-required-message="Please enter your password" autocomplete="off" />
             <p className="help-block text-danger"></p>
           </div>
           <div className="mrgn-30-top">
