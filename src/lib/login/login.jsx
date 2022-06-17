@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './login.css';
 
-function Login({isLogin, route}){
-  const [login, setLogin] = useState(isLogin);
+function Login({ route}){
+  const [isLogin, setIsLogin] = useState(false);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -25,12 +25,12 @@ function Login({isLogin, route}){
           <div className="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-md-8 col-md-offset-2">
             <div id="userform">
               <ul className="nav nav-tabs nav-justified" role="tablist">
-                <li className={login ? "" : "active"}><a onClick={() => setLogin(false)} href="#"  role="tab" data-toggle="tab">Sign up</a></li>
-                <li className={login ? "active" : ""} ><a href="#" onClick={() => setLogin(true)}  role="tab" data-toggle="tab">Log in</a></li>
+                <li className={isLogin ? "" : "active"}><a onClick={() => setIsLogin(false)} href="#"  role="tab" data-toggle="tab">Sign up</a></li>
+                <li className={isLogin ? "active" : ""} ><a href="#" onClick={() => setIsLogin(true)}  role="tab" data-toggle="tab">Log in</a></li>
               </ul>
               <div className="tab-content">
-               {login ? getLoginPage() : getSignupPage()}
-             
+               {isLogin ? getLoginPage() : getSignupPage()}
+            
               </div>
             </div>
           </div>
@@ -39,6 +39,7 @@ function Login({isLogin, route}){
     );
  
     function getSignupPage() {
+        // debugger;
         return( <div className="tab-pane fade active in" id="signup">
         <h2 className="text-uppercase text-center"> Sign Up for Free</h2>
         <form id="signup">
@@ -46,31 +47,31 @@ function Login({isLogin, route}){
             <div className="col-xs-12 col-sm-6">
               <div className="form-group">
                 <label>First Name<span className="req">*</span> </label>
-                <input type="text" value={firstName} onChange={(text) => setFirstName(text.target.value)} className="form-control" id="first_name" required data-validation-required-message="Please enter your name." autocomplete="off" />
+                <input type="text" value={firstName} onChange={(text) => setFirstName(text.target.value)} className="form-control" id="first_name" required data-validation-required-message="Please enter your name." autoComplete="off" />
                 <p className="help-block text-danger"></p>
               </div>
             </div>
             <div className="col-xs-12 col-sm-6">
               <div className="form-group">
                 <label> Last Name<span className="req">*</span> </label>
-                <input type="text" value={lastName} onChange={(text) => setLastName(text.target.value)} className="form-control" id="last_name" required data-validation-required-message="Please enter your name." autocomplete="off" />
+                <input type="text" value={lastName} onChange={(text) => setLastName(text.target.value)} className="form-control" id="last_name" required data-validation-required-message="Please enter your name." autoComplete="off" />
                 <p className="help-block text-danger"></p>
               </div>
             </div>
           </div>
           <div className="form-group">
             <label> Your Email<span className="req">*</span> </label>
-            <input type="email" value={email} onChange={(text) => setEmail(text.target.value)} className="form-control" id="email" required data-validation-required-message="Please enter your email address." autocomplete="off" />
+            <input type="email" value={email} onChange={(text) => setEmail(text.target.value)} className="form-control" id="email" required data-validation-required-message="Please enter your email address." autoComplete="off" />
             <p className="help-block text-danger"></p>
           </div>
           <div className="form-group">
             <label> Your Phone<span className="req">*</span> </label>
-            <input type="tel" value={phone} onChange={(text) => setPhone(text.target.value)} className="form-control" id="phone" required data-validation-required-message="Please enter your phone number." autocomplete="off" />
+            <input type="tel" value={phone} onChange={(text) => setPhone(text.target.value)} className="form-control" id="phone" required data-validation-required-message="Please enter your phone number." autoComplete="off" />
             <p className="help-block text-danger"></p>
           </div>
           <div className="form-group">
             <label> Password<span className="req">*</span> </label>
-            <input type="password" value={password} onChange={(text) => setPassword(text.target.value)} className="form-control" id="password" required data-validation-required-message="Please enter your password" autocomplete="off" />
+            <input type="password" value={password} onChange={(text) => setPassword(text.target.value)} className="form-control" id="password" required data-validation-required-message="Please enter your password" autoComplete="off" />
             <p className="help-block text-danger"></p>
           </div>
           <div className="mrgn-30-top">
@@ -79,7 +80,8 @@ function Login({isLogin, route}){
             </button>
           </div>
         </form>
-      </div>)
+      </div>
+      )
     }
     
     
@@ -91,13 +93,13 @@ function Login({isLogin, route}){
          
           <div className="form-group">
             <label> Your Email<span className="req">*</span> </label>
-            <input type="email" value={email} onChange={(text) => setEmail(text.target.value)} className="form-control" id="email" required data-validation-required-message="Please enter your email address." autocomplete="off" />
+            <input type="email" value={email} onChange={(text) => setEmail(text.target.value)} className="form-control" id="email" required data-validation-required-message="Please enter your email address." autoComplete="off" />
             <p className="help-block text-danger"></p>
           </div>
           
           <div className="form-group">
             <label> Password<span className="req">*</span> </label>
-            <input type="password" value={password} onChange={(text) => setPassword(text.target.value)} className="form-control" id="password" required data-validation-required-message="Please enter your password" autocomplete="off" />
+            <input type="password" value={password} onChange={(text) => setPassword(text.target.value)} className="form-control" id="password" required data-validation-required-message="Please enter your password" autoComplete="off" />
             <p className="help-block text-danger"></p>
           </div>
           <div className="mrgn-30-top">
